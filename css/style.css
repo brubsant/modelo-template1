@@ -1,0 +1,90 @@
+/* Configurações pre definidas com uma variavel */
+:root {
+    --background: hsl(140 30% 16%);
+    /* fundo da pagina */
+    --foreground: hsl(0 0% 98%);
+    /* escrita */
+    --secondary: hsl(140 15% 26%);
+    --muted-foreground: hsl(0 0% 72%);
+    --border: hsl(140 15% 30% / .3);
+    --accent: hsl(80 50% 65%);
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+
+/* Animaçao passaros voando*/
+
+.birds {
+    .birds {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 1030;
+    }
+
+    .bird {
+        position: absolute;
+        will-change: transform;
+    }
+
+    .bird-1 {
+        top: 25%;
+        animation: fly 16s linear infinite, bob 8s ease-in-out infinite;
+    }
+
+    .bird-2 {
+        top: 15%;
+        animation: fly 22s linear infinite 5s, bob 6s ease-in-out infinite 5s;
+    }
+
+    .bird-3 {
+        top: 40%;
+        animation: fly 19s linear infinite 10s, bob 7s ease-in-out infinite 10s;
+    }
+}
+
+/* animacao dos passaros */
+
+/* Criando a animação de "voar" */
+@keyframes fly {
+    from {
+        transform: translateX(-10VW);
+    }
+
+    /*de */
+    to {
+        transform: translateX(110VW);
+    }
+
+    /*para*/
+}
+
+@keyframes bob { /* movimento suave para cima e para baixo*/
+
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    25% {
+        margin-top: -5vh;
+    }
+
+    50% {
+        margin-top: 2vh;
+    }
+
+    75% {
+        margin-top: -3vh;
+    }
+}
+
