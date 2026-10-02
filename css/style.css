@@ -1,10 +1,11 @@
 /* Configurações pre definidas com uma variavel */
 :root {
-    --background: hsl(140 30% 16%);
     /* fundo da pagina */
-    --foreground: hsl(0 0% 98%);
+    --background: hsl(140 30% 16%);
     /* escrita */
+    --foreground: hsl(0 0% 98%);
     --secondary: hsl(140 15% 26%);
+    /* escrita fosca */
     --muted-foreground: hsl(0 0% 72%);
     --border: hsl(140 15% 30% / .3);
     --accent: hsl(80 50% 65%);
@@ -68,7 +69,8 @@ body {
     /*para*/
 }
 
-@keyframes bob { /* movimento suave para cima e para baixo*/
+@keyframes bob {
+    /* movimento suave para cima e para baixo*/
 
     0%,
     100% {
@@ -88,3 +90,51 @@ body {
     }
 }
 
+
+/* Menu navbar */
+
+.site-nav {
+    background: transparent;
+    transition: background .3s ease, box-shadow .3s ease;
+}
+
+/* rolar a página*/
+.site-nav.scrolled {
+    background: hsl(140 25% 16% / .75);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 24px hsl(0 0% 0% / .25);
+}
+
+/* logo*/
+.brand {
+    color: var(--foreground);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* Ao passar o mouse na logo*/
+.brand:hover {
+    color: var(--accent);
+}
+
+.site-nav .nav-link {
+    color: var(--muted-foreground);
+    font-size: .9rem;
+    font-weight: 500;
+    transition: color .2s ease;
+}
+
+/* Ao passar o mouse nas escritas do menu*/
+
+.nav-link:hover,
+.site-nav .nav-link.active {
+    color: var(--foreground);
+}
+
+/* menu hamburguer */
+.navbar-toggler {
+    color: var(--foreground);
+    font-size: 1.5rem;
+    box-shadow: none !important;
+}
