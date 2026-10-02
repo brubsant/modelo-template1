@@ -91,7 +91,7 @@ body {
 }
 
 
-/* Menu navbar */
+/*======= Menu navbar ======= */
 
 .site-nav {
     background: transparent;
@@ -138,3 +138,76 @@ body {
     font-size: 1.5rem;
     box-shadow: none !important;
 }
+
+/* === 1 secao HERO ======*/
+
+.hero { 
+    min-height: 100vh; 
+    position: relative; 
+    overflow: hidden; 
+    padding: 7rem 0 4rem; 
+}
+
+.hero-bg { 
+    position: absolute; 
+    inset: 0; 
+}
+
+/* imagem de fundo */
+.hero-bg img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+/* camada de sopreposição hero */
+
+.hero-overlay { 
+    position: absolute; 
+    inset: 0; 
+    background: hsl(140 30% 16% / .45); 
+}
+
+.hero-card { 
+    max-width: 56rem; 
+    margin: 0 auto; 
+}
+
+/* titulo */
+
+.display-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+}
+
+/* descricao */
+.lead-text { 
+    color: var(--muted-foreground); 
+    max-width: 32rem; 
+    font-size: 1rem; 
+    line-height: 1.7; 
+}
+
+/* botao hero sobre */
+.btn-hero {
+  background: #fff;
+  color: hsl(140 30% 16%);
+  border-radius: 50px;
+  font-weight: 600;
+  padding: .9rem 2rem;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+/* quando mouse passar por cima */
+.btn-hero:hover {
+  background: var(--accent);
+  color: hsl(140 30% 12%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px hsl(0 0% 0% / .35);
+}
+
+/* ======= 2 secao ======== */
+
