@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <!-- Para aceitar caracteres especiais-->
+    <meta charset="UTF-8" />
+    <!-- Para aceitar em tamanhos de telas diferentes-->
+    <meta name=" viewport" content="width=device-width" , initial-scale="1" />
+
+    <!-- Importar boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Importar css-->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Adicionar favicon página-->
+    <link rel="icon" type="image/svg+xml" href="/assets/logo_folha.png">
+
+    <!-- titulo da pagina-->
+    <title>Template 1</title>
+</head>
+
+<body>
+
+    <!--Passadora voando-->
+    <div class="birds aria-hidden=true">
+
+        <!--passaro 1-->
+        <div class="bird bird-1">
+            <svg width="42" height="24" viewBox="0 0 32 18" fill="none">
+                <path d="M0 14C5 5 9 2 16 9C23 2 27 5 32 14" stroke="rgba(255,255,255,.45)" stroke-width="2"
+                    stroke-linecap="round" fill="none">
+                    <animate attributeName="d"
+                        values="M0 14C5 5 9 2 16 9C23 2 27 5 32 14;M0 9C5 12 9 14 16 9C23 14 27 12 32 9;M0 14C5 5 9 2 16 9C23 2 27 5 32 14"
+                        dur="0.5s" repeatCount="indefinite" />
+                </path>
+            </svg>
+        </div>
+
+        <!--passaro 2-->
+        <div class="bird bird-2">
+            <svg width="22" height="13" viewBox="0 0 32 18" fill="none">
+                <path d="M0 14C5 5 9 2 16 9C23 2 27 5 32 14" stroke="rgba(255,255,255,.4)" stroke-width="2.5"
+                    stroke-linecap="round" fill="none">
+                    <animate attributeName="d"
+                        values="M0 14C5 5 9 2 16 9C23 2 27 5 32 14;M0 9C5 12 9 14 16 9C23 14 27 12 32 9;M0 14C5 5 9 2 16 9C23 2 27 5 32 14"
+                        dur="0.45s" repeatCount="indefinite" />
+                </path>
+            </svg>
+        </div>
+
+        <div class="bird bird-3">
+            <svg width="32" height="18" viewBox="0 0 32 18" fill="none">
+                <path d="M0 14C5 5 9 2 16 9C23 2 27 5 32 14" stroke="rgba(255,255,255,.35)" stroke-width="2"
+                    stroke-linecap="round" fill="none">
+                    <animate attributeName="d"
+                        values="M0 14C5 5 9 2 16 9C23 2 27 5 32 14;M0 9C5 12 9 14 16 9C23 14 27 12 32 9;M0 14C5 5 9 2 16 9C23 2 27 5 32 14"
+                        dur="0.55s" repeatCount="indefinite" />
+                </path>
+            </svg>
+        </div>
+
+    </div>
+
+    <!-- menu cabecalho-->
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top site-nav">
+            <div class="container">
+
+                <a class="navbar-brand brand" href="#">
+                    <i class="bi bi-flower1"> PlantFashion</i></a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                    aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <!--menus-->
+                <div class="collapse navbar-collapse justify-content-end" id="nav">
+
+                    <ul class="navbar-nav gap-md-4">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link " href="#">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link " href="#">Historia</a></li>
+                        <li class="nav-item"><a class="nav-link " href="#">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1 secao hero-->
+        <section class="hero d-flex align-items-center" id="hero">
+            <div class="hero-bg">
+                <img src="assets/leaves-bg.jpg" alt="Folhas verdes" />
+                <div class="hero-overlay"></div>
+            </div>
+
+            <!-- escrita no meio da página-->
+            <div class="container position-relative">
+                <div class="glass-card hero-card p-4 p-md-5 reveal">
+                    <h1 class="display-title mb-4">Find the perfect<br />complement<br />to your room</h1>
+                    <p class="lead-text mb-4">
+                        We will help you find plants that match your needs and style.
+                        Check our offer in the store and surround yourself with greenery!
+                    </p>
+                    <!--botao de sobre-->
+                    <a href="#sobre" class="btn btn-hero">Buy now <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+        </section>
+
+        <!-- 2 secao Diferenciais-->
+        <section id="sobre" class="features py-5">
+            <div class="container py-4">
+                <div class="text-center mb-5 reveal">
+                    <h2 class="section-title">Por que escolher a <span class="text-gradient">PlantFashion</span>?</h2>
+                    <p class="text-muted-soft mx-auto paragrafo">Cuidamos de cada detalhe para que sua
+                        experiência seja única.</p>
+                </div>
+
+                <!--CARDS-->
+
+                <div class="row g-4">
+                    <!--card 1-->
+                    <div class=" col-12 col-sm-6 col-lg-3 reveal">
+                        <div class="glass-card feature h-100 p-4">
+                            <div class="icon-box mb-3"><i class="bi bi-flower2"></i></div>
+                            <h3 class="feature-title">100% Natural</h3>
+                            <p class="feature-text">Plantas cultivadas de forma sustentável, direto do produtor para a
+                                sua casa.</p>
+                        </div>
+                    </div>
+                    <!--card 2-->
+                    <div class="col-12 col-sm-6 col-lg-3 reveal">
+                        <div class="glass-card feature h-100 p-4">
+                            <div class="icon-box mb-3"><i class="bi bi-truck"></i></div>
+                            <h3 class="feature-title">Entrega Cuidadosa</h3>
+                            <p class="feature-text">Embalagem especial que garante que sua planta chegue saudável e
+                                protegida.</p>
+                        </div>
+                    </div>
+
+                    <!--card 3-->
+
+                    <div class="col-12 col-sm-6 col-lg-3 reveal">
+                        <div class="glass-card feature h-100 p-4">
+                            <div class="icon-box mb-3"><i class="bi bi-shield-check"></i></div>
+                            <h3 class="feature-title">Garantia Verde</h3>
+                            <p class="feature-text">30 dias de garantia. Se sua planta não se adaptar, enviamos outra
+                                gratuitamente.</p>
+                        </div>
+                    </div>
+
+                    <!--card 4-->
+                    <div class="col-12 col-sm-6 col-lg-3 reveal">
+                        <div class="glass-card feature h-100 p-4">
+                            <div class="icon-box mb-3"><i class="bi bi-heart"></i></div>
+                            <h3 class="feature-title">Suporte Especializado</h3>
+                            <p class="feature-text">Equipe de botânicos pronta para ajudar nos cuidados com suas
+                                plantas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- rodape footer-->
+    <footer id="contato" class="site-footer py-5">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+                <a href="#" class="brand text-decoration-none "> <i class="bi bi-flower1"></i>PlantFashion</a>
+
+                <!--menu de navegação-->
+                <div class=" d-flex gap-4">
+                    <a href="#" class="footer-link">Home</a>
+                    <a href="#sobre" class="footer-link">Sobre</a>
+                    <a href="#sobre" class="footer-link">Historia</a>
+                    <a href="#contato" class="footer-link">Contato</a>
+                </div>
+
+                <p class="mb-0 footer-link">© 2026 PlantFashion. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- scripts js bootsrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script> 
+</body>
+
+</html>

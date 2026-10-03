@@ -1,0 +1,306 @@
+/* Configurações pre definidas com uma variavel */
+:root {
+    /* fundo da pagina */
+    --background: hsl(140 30% 16%);
+    /* escrita */
+    --foreground: hsl(0 0% 98%);
+    --secondary: hsl(140 15% 26%);
+    /* escrita fosca */
+    --muted-foreground: hsl(0 0% 72%);
+    --border: hsl(140 15% 30% / .3);
+    --accent: hsl(80 50% 65%);
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+
+/* Animaçao passaros voando*/
+
+    .birds {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 1030; 
+    }
+
+    .bird {
+        position: absolute;
+        will-change: transform;
+    }
+
+    .bird-1 {
+        top: 25%;
+        animation: fly 16s linear infinite, bob 8s ease-in-out infinite;
+    }
+
+    .bird-2 {
+        top: 15%;
+        animation: fly 22s linear infinite 5s, bob 6s ease-in-out infinite 5s;
+    }
+
+    .bird-3 {
+        top: 40%;
+        animation: fly 19s linear infinite 10s, bob 7s ease-in-out infinite 10s;
+    }
+
+/* animacao dos passaros */
+
+/* Criando a animação de "voar" */
+@keyframes fly {
+    from {
+        transform: translateX(-10VW);
+    }
+
+    /*de */
+    to {
+        transform: translateX(110VW);
+    }
+
+    /*para*/
+}
+
+@keyframes bob {
+    /* movimento suave para cima e para baixo*/
+
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    25% {
+        margin-top: -5vh;
+    }
+
+    50% {
+        margin-top: 2vh;
+    }
+
+    75% {
+        margin-top: -3vh;
+    }
+}
+
+
+/*======= Menu navbar ======= */
+
+.site-nav {
+    background: transparent;
+    transition: background .3s ease, box-shadow .3s ease;
+}
+
+/* rolar a página*/
+.site-nav.scrolled {
+    background: hsl(140 25% 16% / .75);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 24px hsl(0 0% 0% / .25);
+}
+
+/* logo*/
+.brand {
+    color: var(--foreground);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* Ao passar o mouse na logo*/
+.brand:hover {
+    color: var(--accent);
+}
+
+.site-nav .nav-link {
+    color: var(--muted-foreground);
+    font-size: .9rem;
+    font-weight: 500;
+    transition: color .2s ease;
+}
+
+/* Ao passar o mouse nas escritas do menu*/
+
+.nav-link:hover,
+.site-nav .nav-link.active {
+    color: var(--foreground);
+}
+
+/* menu hamburguer */
+.navbar-toggler {
+    color: var(--foreground);
+    font-size: 1.5rem;
+    box-shadow: none !important;
+}
+
+/* === 1 secao HERO ======*/
+
+.hero { 
+    min-height: 100vh; 
+    position: relative; 
+    overflow: hidden; 
+    padding: 7rem 0 4rem; 
+}
+
+.hero-bg { 
+    position: absolute; 
+    inset: 0; 
+}
+
+/* imagem de fundo */
+.hero-bg img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+/* camada de sopreposição hero */
+
+.hero-overlay { 
+    position: absolute; 
+    inset: 0; 
+    background: hsl(140 30% 16% / .45); 
+}
+
+.hero-card { 
+    max-width: 56rem; 
+    margin: 0 auto; 
+}
+
+/* titulo */
+
+.display-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+}
+
+/* descricao */
+.lead-text { 
+    color: var(--muted-foreground); 
+    max-width: 32rem; 
+    font-size: 1rem; 
+    line-height: 1.7; 
+}
+
+/* botao hero sobre */
+.btn-hero {
+  background: #fff;
+  color: hsl(140 30% 16%);
+  border-radius: 50px;
+  font-weight: 600;
+  padding: .9rem 2rem;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+/* quando mouse passar por cima */
+.btn-hero:hover {
+  background: var(--accent);
+  color: hsl(140 30% 12%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px hsl(0 0% 0% / .35);
+}
+
+/* fundo fosco*/
+.glass-card {
+  background: hsl(140 25% 20% / .6);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px hsl(0 0% 0% / .3);
+}
+/* ======= 2 secao diferenciais======== */
+
+.features { 
+    background: hsl(140 15% 26% / .5); 
+}
+
+/* titulo*/
+.section-title { 
+    font-weight: 700; 
+    font-size: clamp(1.75rem, 3vw, 2.25rem); 
+}
+
+/* palavra destaque*/
+.text-gradient {
+  background: linear-gradient(135deg, #fff, hsl(80 50% 65%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/*paragrafo descricao */
+.paragrafo{
+    max-width:32rem;
+    color: var(--muted-foreground); 
+}
+
+/* card */
+.feature { 
+    transition: transform .3s ease, box-shadow .3s ease; 
+}
+
+.feature:hover { 
+    transform: translateY(-4px); 
+    box-shadow: 0 14px 36px hsl(0 0% 0% / .35); 
+}
+
+/* icones */
+.icon-box {
+  width: 3rem; height: 3rem; border-radius: .85rem;
+  background: hsl(0 0% 100% / .1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.25rem; color: #fff;
+  transition: background .3s ease;
+}
+
+/* transicao icones */
+.feature:hover .icon-box { 
+    background: hsl(0 0% 100% / .2); 
+}
+
+.feature-title { 
+    font-size: 1.1rem; 
+    font-weight: 600; 
+    margin-bottom: .5rem; 
+}
+
+/*descricao card*/
+.feature-text { 
+    font-size: .875rem; 
+    color: var(--muted-foreground); 
+    line-height: 1.6; 
+    margin: 0; 
+}
+
+/* ====== footer ======*/
+
+.site-footer{
+    background: var(--secondary);
+}
+
+.footer-link { 
+    color: var(--muted-foreground); 
+    font-size: .875rem; 
+    text-decoration: none; 
+    transition: color .2s ease; 
+}
+
+.footer-link:hover { 
+    color: var(--foreground); 
+}
+
+/* ---------- Reveal on scroll animação de aparecer---------- */
+.reveal { 
+    opacity: 0; 
+    transform: translateY(30px); 
+    transition: opacity .7s ease, transform .7s ease; 
+}
+.reveal.is-visible { opacity: 1; transform: none; }
