@@ -23,13 +23,12 @@ body {
 
 /* Animaçao passaros voando*/
 
-.birds {
     .birds {
         position: fixed;
         inset: 0;
         pointer-events: none;
         overflow: hidden;
-        z-index: 1030;
+        z-index: 1030; 
     }
 
     .bird {
@@ -51,7 +50,6 @@ body {
         top: 40%;
         animation: fly 19s linear infinite 10s, bob 7s ease-in-out infinite 10s;
     }
-}
 
 /* animacao dos passaros */
 
@@ -209,6 +207,15 @@ body {
   box-shadow: 0 10px 28px hsl(0 0% 0% / .35);
 }
 
+/* fundo fosco*/
+.glass-card {
+  background: hsl(140 25% 20% / .6);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px hsl(0 0% 0% / .3);
+}
 /* ======= 2 secao diferenciais======== */
 
 .features { 
